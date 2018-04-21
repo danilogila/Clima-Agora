@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #a37b8d, #906c81, #7d5e74, #6a5068, #57435b);
+}
+
+.wrapper{
+    max-width: 280px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+.place-info{
+    width: 280px;
+    height: 450px;
+    padding: 40px 0px 0px 0px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    overflow: hidden;
+  }
+  
+.place-info::after {
+    content: "";
+    background: url(../img/blood.png);
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+    
+  }
+
+  .wrapper-temperature{
+      position: relative;
+  }
+
+  .degree-symbol{
+    position: absolute;
+    top: 15px;
+    right: -15px;
+  }
+
+  .temperature{
+    font-size: 4em;
+    color: white;
+    font-weight: 100;
+  }
+
+  .degree-symbol::after{
+    content: "\00b0";
+  }
+
+  .city{
+      padding: 5px;
+      opacity: 0.7;
+  }
+
+  .week-forecast{
+      background-color: transparent;
+      height: 80px;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      overflow: hidden;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+  }
+
+  .next-forecasts{
+      width: 90%;
+      height: calc(80px/2);
+      display: inherit;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .next-forecasts:first-child{
+      border-bottom: 1px solid white;
+      
+  }
+
+  .week-day-info span{
+      display: block;
+      text-align: center;
+  }
+
+  .week-day-temperature::after{
+    content: "\00b0";
+  }
+
+  .week-day-weather{
+      font-weight: 300;
+      opacity: 0.8;
+  }
