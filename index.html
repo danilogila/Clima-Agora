@@ -17,36 +17,38 @@
                 <span class="temperature">23</span>
                 <span class="degree-symbol">C</span>
             </div>
-            <input class="city" value="" placeholder="Ex: Rio de Janeiro" contenteditable="true">
+            <form class="form-city">
+                <input class="city" type="text" placeholder="Ex: Rio de Janeiro" required>
+            </form>
             <span class="weather">Nublado</span>
         </div>
 
         <div class="week-forecast">
             <div class="next-forecasts">
                 <div class="week-day">
-                    <span class="week-day-text">Domingo</span>
+                    <span class="week-day-text first-forecast-day">Domingo</span>
                 </div>
 
                 <div class="week-day-info">
-                    <span class="week-day-temperature">17</span>
-                    <span class="week-day-weather">Nublado</span>
+                    <span class="week-day-temperature first-temp-forecast">0</span>
+                    <span class="week-day-weather first-weather-forecast">Nublado</span>
                 </div>
             </div>
 
             <div class="next-forecasts">
                 <div class="week-day">
-                    <span class="week-day-text">Segunda-Feira</span>
+                    <span class="week-day-text last-forecast-day">Segunda-Feira</span>
                 </div>
 
                 <div class="week-day-info">
-                    <span class="week-day-temperature">27</span>
-                    <span class="week-day-weather">Chuvoso</span>
+                    <span class="week-day-temperature last-temp-forecast">0</span>
+                    <span class="week-day-weather last-weather-forecast">Chuvoso</span>
                 </div>
             </div>
         </div>
     </div>
 
-
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
 
 </html>

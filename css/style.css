@@ -41,10 +41,10 @@ body{
 .place-info::after {
     content: "";
     background: url(../img/blood.png);
-    height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%; 
     top: 0;
     left: 0;
     bottom: 0;
@@ -72,6 +72,14 @@ body{
 
   .degree-symbol::after{
     content: "\00b0";
+  }
+
+  .weather{
+      text-transform: capitalize;
+  }
+
+  .form-city{
+      margin: 0;
   }
 
   .city{
