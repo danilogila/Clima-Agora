@@ -32,7 +32,6 @@ async function fetchCity(cityName){
             fetch(URLForecast, myInit)
             .then((resp) => resp.json())
             .then(function (data) {
-                //manipularDados(data);
                 forecast(data);
             })
         ])
@@ -48,20 +47,15 @@ async function fetchCity(cityName){
 
 function manipularDados(data){
 
-    console.log(data);
-
     document.querySelector(".temperature").textContent = ((data.main.temp - 273).toFixed(0));
-    console.log((data.main.temp - 273).toFixed(1));
 
-    weatherId(data.weather[0].id);
+    let weather = document.querySelector(".weather");
+    weather.innerHTML = weatherId(data.weather[0].id);
 
 }
 
 
 function weatherId (id) {
-
-    let weather = document.querySelectorAll(".weather");
-    console.log(weather);
 
     let weatherConditions = {
     
@@ -146,14 +140,11 @@ function weatherId (id) {
         962: 'Furacão'
 
         }
-       
-        weather.textContent = weatherConditions[id];
+
         return weatherConditions[id];
        }
        
 function forecast(arrayForecast){
-
-    console.log(arrayForecast);
 
     const weekDays = ["Domingo","Segunda-Feira","Terça-Feira","Quarta-Feira","Quinta-Feira","Sexta-Feira","Sábado"];
     const firstForecastSpan = document.querySelector(".first-forecast-day");
