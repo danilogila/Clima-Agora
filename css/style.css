@@ -126,7 +126,7 @@ body{
 
   .week-day-info span{
       display: block;
-      text-align: center;
+      text-align: right;
   }
 
   .week-day-temperature::after{
